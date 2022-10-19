@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class PosterTest {
 
     @Test
-    public void testAdd(){
+    public void testAdd() {
         Poster manager = new Poster();
         manager.addMovies("movies1");
 
@@ -16,7 +16,7 @@ public class PosterTest {
     }
 
     @Test
-    public void testFindLastMiddle(){
+    public void testFindLastMiddle() {
         Poster manager = new Poster();
         manager.addMovies("movies1");
         manager.addMovies("movies2");
@@ -31,7 +31,7 @@ public class PosterTest {
     }
 
     @Test
-    public void testFindLastMore(){
+    public void testFindLastMore() {
         Poster manager = new Poster();
         manager.addMovies("movies1");
         manager.addMovies("movies2");
@@ -46,7 +46,7 @@ public class PosterTest {
     }
 
     @Test
-    public void findAllMoviesTest(){
+    public void findAllMoviesTest() {
         Poster manager = new Poster();
         manager.addMovies("movies1");
         manager.addMovies("movies2");
