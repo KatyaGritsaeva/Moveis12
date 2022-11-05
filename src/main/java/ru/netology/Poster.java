@@ -4,11 +4,12 @@ public class Poster {
     private String[] movies = new String[0];
     private int limit;
 
-    public Poster(){
+    public Poster() {
         this.limit = 3;
     }
 
-    public Poster(int limit){
+    public Poster(int limit) {
+
         this.limit = limit;
     }
 
@@ -27,20 +28,18 @@ public class Poster {
         return movies;
     }
 
-    public String[] findLastMovies(int limit) {
+    public String[] findLastMovies() {
         int countMovies;
-        if (limit <= movies.length){
+        if (limit <= movies.length) {
             countMovies = limit;
-        }
-        else {
-            limit = movies.length;
+        } else {
+            countMovies = movies.length;
         }
 
-        String[] tmp = new String[limit];
-        for (int i = 0; i < limit; i++) {
+        String[] tmp = new String[countMovies];
+        for (int i = 0; i < tmp.length; i++) {
             tmp[i] = movies[movies.length - 1 - i];
         }
-        //movies = tmp;
         return tmp;
     }
 }

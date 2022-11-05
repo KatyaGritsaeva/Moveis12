@@ -17,7 +17,7 @@ public class PosterTest {
 
     @Test
     public void testFindLastMiddle() {
-        Poster manager = new Poster();
+        Poster manager = new Poster(3);
         manager.addMovies("movies1");
         manager.addMovies("movies2");
         manager.addMovies("movies3");
@@ -26,13 +26,13 @@ public class PosterTest {
         manager.addMovies("movies6");
 
         String[] expected = {"movies6", "movies5", "movies4"};
-        String[] actual = manager.findLastMovies(3);
+        String[] actual = manager.findLastMovies();
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void testFindLastMore() {
-        Poster manager = new Poster();
+        Poster manager = new Poster(10);
         manager.addMovies("movies1");
         manager.addMovies("movies2");
         manager.addMovies("movies3");
@@ -41,7 +41,7 @@ public class PosterTest {
         manager.addMovies("movies6");
 
         String[] expected = {"movies6", "movies5", "movies4", "movies3", "movies2", "movies1"};
-        String[] actual = manager.findLastMovies(10);
+        String[] actual = manager.findLastMovies();
         Assertions.assertArrayEquals(expected, actual);
     }
 
